@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+        <link rel="stylesheet" href="createEvent.css">
+        <link rel="stylesheet" href="project.css">
+        <script src="/javascripts/ajax.js" defer></script>
+        
+    </head>
+
+    <body onload = "createLog()">
+    <div id="app">
+            <h1 id="name">🐾 CattyPlanner
+                <span><img id="image" src="catty.jpg"/></span>
+                <h2 id="des"> Your personal event planner!</h2>
+            </h1>
+        
+        <div class="top-menu">
+            <div class="search-bar">
+                <input type="text" placeholder="What events?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+    
+            </div>
+        </div>
+
+
+    <h1 id="header1">Create Your Event</h1>
+    <div class="back">
+    <br/>
+    <br/>
+    <div class="create-Event">
+        <div class="select-type">
+            <label>Choose your event type:</label>
+            <select id="select-type" name="event[event_type]"><option  value="">Selecting...</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Festival">Festival</option>
+                <option value="Party">Party</option>
+                <option value="Performance">Performance</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Other">Other</option></select>
+        </div>
+
+        <label>Event Name:</label>
+        <input id = "ename" type="text" class="input" placeholder="create your event name...">
+
+        <hr/>
+
+        <label>Location Address:</label> <br>
+        <label>Street Number: </label>
+        <input id = "strnum" class="input" type="text">
+        <br>
+        <label>Street Name: </label>
+        <input id = "strn" class="input" type="text">
+        <br>
+        <label>City: </label>
+        <input id = "city" class="input" type="text">
+        <br>
+        <label>Post Code: </label>
+        <input id = "postc" class="input" type="text">
+        <hr/>
+
+        <label>Start Date/Time:</label><br/>
+        <input id = "date" class="input" type="date">
+        <input id = "time" class="input" type="time"><br/>
+        <hr>
+    
+        <div style="text-align: center;"> 
+            <button onclick = "addevent()" class="event-create" type="button"> Create </button> 
+            <button class="event-create" onclick = "window.location.href='/myEvent.html'" type="button"> Check Event </button>
+        </div>
+
+        <hr>
+
+        <div align="center">
+        <button id = "addcal" onclick = "sendEmail()"> Send an Email </button>
+        <button id = "addcal" onclick = "addCal()"> Add to Calendar </button>
+        <button id = "addcal" onclick = "glink()"> Share Link </button>
+        </div>
+
+    </div>
+    <br/>
+        <br/>
+        <br/>
+    </div>
+    <footer>
+    <div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <br/>
+    <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+    </div>
+    </footer>
+    
+   
+
+</div>
+</body>
+</html>

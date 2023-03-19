@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+        <script src="/javascripts/ajax.js" defer></script>
+        <link rel="stylesheet" href="project.css">
+        <link rel="stylesheet" href="Contact.css">
+        
+    </head>
+
+    <body onload = "checkIfLog()">
+        <div id="app">
+          
+        <div id = "logo">
+            <h1 id="name">🐾 CattyPlanner
+                <span><img id="image" src="catty.jpg"/></span>
+                <h2 id="des"> Your personal event planner!</h2>
+            </h1>
+            </div>
+            
+
+
+            <div class="top-menu">
+                <div class="search-bar">
+                    <input type="text" placeholder="What events?">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                    <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                    <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+                </div>
+            </div>
+        
+
+        <h1 id="header">Contact Us</h1>
+
+        <div class="back">
+        <div id="feedback">
+            <h2>Feedbacks: </h2>
+            <input type="email" id="e-mail" placeholder="Please enter your e-mail(required)"> <br/>
+            <textarea id="question-area" rows="10" cols="100" placeholder="A brief description of your problem/question:(required)"></textarea><br/>
+            <button type="submit" id="submit-button">submit</button>
+        </div>
+
+        <hr/>
+        
+        <div class="contact-details">
+            <h2 id="title1">Contact Information</h2>
+            <pre id="details">
+<b>Instegram</b>      comming soon
+
+<b>Twitter</b>        comming soon
+
+<b>Facebook</b>       comming soon
+
+<b>Youtube</b>        comming soon
+            </pre>
+        </div>
+    </div>
+
+        <div>
+            <footer>
+                <div class="bottom-nav">
+                <a href="help.html">Help</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                </div>
+                <br/>
+                <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-instagram"></i>
+                </div>
+            </footer>
+            </div>
+
+        </div>
+    </body>

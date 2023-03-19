@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log in page</title>
+	<link rel="stylesheet" href="log_in.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+    <script src="javascripts/ajax.js" defer></script>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="148368185397-82fl13lgha9mbjvp1c13j4b0no94fv0t.apps.googleusercontent.com">
+    <meta name="google-signin-plugin_name" content="app">
+   
+</head>
+<body onload = "checkIfLog()">
+	<div id = "app">
+		<div id = "logo">
+        <h1 id="name">🐾 CattyPlanner
+            <span><img id="image" src="catty.jpg"/></span>
+        </h1>
+        <h2 id="des"> Your personal event planner!</h2>
+        </div>
+           
+        <div class="back">
+        <nav class="menu">
+        
+        <div class="top-menu">
+            <div class="search-bar">
+                <input type="text" placeholder="What events?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+            </div>
+        </div>
+    </nav>
+    
+
+		<div class = "main-div" id="login-div">
+			<h1 style = "text-decoration: underline;"> LOG IN </h1>
+
+			<h4 class = "login">Username</h4>
+			<input id = "ulog" class="logbox" type="text" name="Username">
+			<h4 class = "login">Password</h4>
+			<input id = "plog" class="logbox" type="password" name="Password">
+			<br>
+            <p id="err" style = "display:none; color: red;"> Incorrect username or password. Please try again. </p>
+			<button onclick = "log()" class = "center"> Log In </button> 
+			<br>
+			<a href="/manager_log_in.html"> Admin Login </a> 
+			<br>
+			<p> Need an account? <a href="sign_up.html"> Sign up here </a> </p>
+
+            <div id = "g" class="g-signin2" data-onsuccess="onSignIn"></div>
+            
+            <br/>
+            <a href="#" onclick="signOut();">Sign out</a>
+
+		</div>
+
+        
+
+    	<footer>
+        <div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        <br/>
+        <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+        </div>
+    	</footer>
+ 	</div>
+	</div>
+</body>
+</html>

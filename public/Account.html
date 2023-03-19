@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Account Detail</title>
+	<script src="/javascripts/ajax.js" defer></script>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="Account.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+    <script src="project.js" defer></script>
+</head>
+<body onload = "createLog(); show()">
+	<div id="app">
+
+		<div id="logo">
+		<h1 id="name">🐾 CattyPlanner
+			<span><img id="image" src="catty.jpg"/></span> </h1>
+		<h2 id="des"> Your personal event planner!</h2>
+		</div>
+
+	<nav class="menu">
+	<div class="top-menu">
+		<div class="search-bar">
+			<input type="text" placeholder="What events?">
+			<button type="submit"><i class="fa fa-search"></i></button>
+			<a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+            <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+            <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+		</div>
+	</div>
+	</nav>
+
+	<main>	
+
+		<h1 id="title">  Manage Your Account </h1>
+		
+		<div class="back">
+		
+		<br/>
+		<br/>
+
+		<div class = "box">
+			<h3> Profile </h3>
+
+		<div class = "detail">
+			<label class="f"> Username </label>
+			<p class = "edit" style="font-family: monospace;"> (You can't change your user name) </p>
+			<pre class = "show">   {{user.username}} </pre>
+		</div>
+
+		<div class = "detail">
+			<label class="f"> First Name </label>
+			<input v-model = "user.firstname" class = "edit" type="text"> 
+			<pre class = "show">   {{user.firstname}}</pre> 
+		</div>
+
+		<div class = "detail">
+			<label class="f"> Last Name </label>
+			<input v-model = "user.lastname" class = "edit" type="text"> 
+			<pre class = "show">   {{user.lastname}}</pre> 
+		</div>
+
+		<div class = "detail">
+			<label class="f"> Email Address </label>
+			<input v-model = "user.email" class = "edit" type="text"> 
+			<pre class = "show">   {{user.email}}</pre> 
+		</div>
+
+		<div class = "detail">
+			<label class="f"> Mobile </label>
+			<input v-model = "user.mobile" class = "edit" type="text"> 
+			<pre class = "show">   +61 {{user.mobile}}</pre>
+		</div>
+
+			<button class = "e" id="editB"> Edit </button>
+			<button onclick = "finish()" class = "e" id="editF" style="display: none;"> Finish </button> 
+
+		</div>
+
+		<div class = "box">
+			<h3> Email Subscription </h3>
+			<label class="b" for="box1"><input type="checkbox" name="box1" value = "notification" checked> I would like to receive notification </label>
+			<br/>
+			<div id = "check">
+				<label class="b">Let me know when: </label> <br/>
+				<label class="b" for="box2"><input class = "email" type="checkbox" name="box2" value = "notification">  users responed</label><br/>
+				<label class="b" for="box3"><input class = "email" type="checkbox" name="box3" value = "notification">  availability is confirmed</label><br/>
+				<label class="b" for="box4"><input class = "email" type="checkbox" name="box4" value = "notification">  the event is finalised</label><br/>
+				<label class="b" for="box5"><input class = "email" type="checkbox" name="box5" value = "notification">  the event is cancelled</label><br/>
+			</div>
+		</div>
+
+		<div align="center">
+			<button class="e" id = "logout" onclick = "logout()"> Log out </button>
+		</div>
+
+		<br/>
+	</div>
+</main>
+	<footer>
+ 	<div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <br/>
+    <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+    </div>
+	</footer>
+    
+
+</body>
+</html>

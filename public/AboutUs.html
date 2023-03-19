@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+        <script src="project.js" defer></script>
+        <link rel="stylesheet" href="project.css">
+        <link rel="stylesheet" href="AboutUs.css">
+        <script src="/javascripts/ajax.js" defer></script>
+    </head>
+
+    <body onload = "checkIfLog()">
+
+        <div id="app">
+
+        <div id="logo">
+            <h1 id="name">🐾 CattyPlanner
+                <span><img id="image" src="catty.jpg"/></span> </h1>
+            <h2 id="des"> Your personal event planner!</h2>
+        </div>
+
+        
+        <div class="top-menu">
+            <div class="search-bar">
+                <input type="text" placeholder="What events?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+               <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+
+            </div>
+        </div>
+
+        <br>
+
+        <header>
+       <span> <h1> About Us </h1> </span>
+        </header>
+
+        <div class="back">
+
+        <br/>
+        <br/>
+        <div class="bc1">
+        
+        <h1>EXPERIENCE</h1>
+        <p>
+        For the last few weeks our team has brought brands and customers together through inventive and inspiring marketing and creative communications.
+        Our approach combines creative and strategic thinking with technical expertise and personalised service.
+        We have a unique way of looking at problems and solving them. We bring insight, ideation and creativity, underpinned with a solid business rigour.
+        </p>
+        </div>
+        <br/>
+        <br/>
+
+
+        <div class="bc1">
+        
+        <h1>VALUES</h1>
+        <p>
+        Our values are creative, passionate, clever, adaptable and driven. These guide our behaviours as people.
+        You can expect them from us, because we ask them of ourselves.
+        We like to think we are seriously good at what we do, but we don’t take ourselves too seriously. No wank. No swagger.
+        We always remember our clients are at the heart of everything we do and strive to achieve the best outcomes for them.
+        </p>
+        </div>
+        <br/>
+        <br/>
+
+
+    <footer>
+    <div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <br/>
+    <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+    </div>
+    </footer>
+</div>
+</div>
+</body>
+</html>

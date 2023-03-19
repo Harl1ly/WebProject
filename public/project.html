@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+        <script src="/javascripts/ajax.js" defer></script>
+        <link rel="stylesheet" href="project.css">
+        <link rel="stylesheet" href="BrowseEvents.css">
+    </head>
+
+    <body onload = "checkIfLog()">
+        <div id="app">
+
+        <div id = "logo">
+        <h1 id="name">🐾 CattyPlanner
+            <span><img id="image" src="catty.jpg"/></span>
+            <h2 id="des"> Your personal event planner!</h2>
+        </h1>
+        </div>
+        
+        <div class="top-menu">
+            <div class="search-bar">
+                <input type="text" placeholder="What events?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+            </div>
+        </div>
+
+    <div>
+        <div class = "pic">
+        <div class = "container" >
+            <div class = "box box1">
+            </div>
+            </div>
+        <span id="select">
+            <button class="Event" id="e1">Browse Events</button>
+            <button onclick="location.href='createEvent.html';" class="Event" id="e2">Create Events</button>
+            <button onclick="location.href='checkevent.html';" class="Event" id="e3">Check Events</button>
+        </span>
+    </div>
+
+    <hr/>
+
+
+
+    <div id = "browse">
+        <header> <span> <h1 style="font-size:50px; color:#260C1A;"> Browse All Events </h1> </span> </header>
+
+        <div>
+            <div class = "c first" id = "c1">
+            <h1><span class="pink fancy">Birthday for kids!🧒</span></h1>
+            <p>Sleepover, unicorns, superhero and more.</p>
+            <h2 class="word">Browse All Birthdays for Kids</h2>
+            </div>
+
+            <div class = "c second" id = "c2">
+            <h1><span class="pink fancy">Party Celebrations!🏠</span></h1>
+            <p>Birthday party, Wedding and more.</p>
+            <h2 class="word">Browse All Party Celebrations</h2>
+            </div>
+        </div>
+
+        <div>
+            <div class = "c first" id = "c3">
+            <h1><span class="pink fancy">Family gathering!👪</span></h1>
+            <p>Family reunion, potluck, dinner party and more.</p>
+            <h2 class="word">Browse All Family Gathering</h2>
+            </div>
+
+            <div class = "c second" id = "c4">
+             <h1><span class="pink fancy">Graduation! 👨‍🎓</span></h1>
+             <p>Class of 2022 designs, photo frames and more.</p>
+             <h2 class="word">Browse All Graduation</h2>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div>
+    <footer>
+        <div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        <br/>
+        <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+        </div>
+    </footer>
+    </div>
+
+    </div>
+    </body>
+</html>

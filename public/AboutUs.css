@@ -1,0 +1,23 @@
+.bc1{
+    text-align:left;
+    background-color: white;
+    border-radius:8px;
+    width: 60%;
+    margin: auto;
+    border:2px solid darkgrey;
+    padding: 20px;
+}
+
+header {
+    color:#260C1A;
+    text-align:center;
+    padding:10px;
+    font-size: 25px;
+    font-variant:small-caps;
+}
+
+p {
+    font-family: serif;
+    font-size: 18px;
+}
+

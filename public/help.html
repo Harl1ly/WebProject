@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+        <link rel="stylesheet" href="help.css">
+        <link rel="stylesheet" href="project.css">
+        <script src="/javascripts/ajax.js" defer></script>
+        
+    </head>
+
+<body onload = "checkIfLog()">
+    <div id="app">
+            
+        <div id="logo">
+            <h1 id="name">🐾 CattyPlanner
+                <span><img id="image" src="catty.jpg"/></span> </h1>
+            <h2 id="des"> Your personal event planner!</h2>
+        </div>
+
+        <div class="top-menu">
+            <div class="search-bar">
+                <input type="text" placeholder="What events?">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+            </div>
+        </div>
+
+        <header>
+        <span id="checkevents"> <h1> Weclome to CattyPlanner <img id="image2" src="catty.jpg"/> </h1></span>
+
+        </header>
+
+        <main>
+
+         <div id="display">
+            <h3 class= "header2">Take a few minutes to learn our website </h3>
+
+            <div class="div-box">
+
+                <h4 class="a"> Main-page</h4>
+                    <ul class="b">
+                🐾 This is our official webpage<br>
+                   
+                🐾 You can navigate to different web page from here!<br>
+
+                🐾 Make sure you log in first~<br>
+
+                🐾 We will plan a successful event together!<br><br><br>
+
+                </ul>
+            </div>
+
+            <div class="div-box">
+                <h4 class="a"> Browse events</h4> 
+                <ul class="b">
+         🐾 Not sure what events you are planning for?<br>
+                   
+         🐾 We have throw out so many event ideas here!<br>
+
+         🐾 Have a browse!<br>
+
+         🐾 We will plan a successful event here<br><br>
+                </ul>
+
+            </div>
+
+            <div class="div-box">
+                <h4 class="a"> Check events</h4>
+                    <ul class="b">
+         🐾 Already planned a event? Great!<br>
+                   
+         🐾 We have customized a calander to remind you here!<br>
+
+         🐾 You can see the count-donw here as well!<br>
+
+         🐾 Hope you don't miss out your EVENT!<br>
+                </ul>
+            </div>
+
+
+            <div class="div-box">
+                <h4 class="a"> Create events</h4>
+                <ul class="b">
+                    🐾 Ready to create a event?<br>
+                              
+                    🐾 We will start from here!<br>
+           
+                    🐾 We have prepaerd so many event options for you!<br>
+           
+                    🐾 We will plan a successful event here! <br><br><br>
+                </ul>
+                
+            </div>
+        </div>
+
+     </main>
+
+        <footer>
+
+        <div class="bottom-nav">
+            <a href="help.html">Help</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <br/>
+        <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-share-alt"></i>
+            <i class="fas fa-instagram"></i>
+        </div>
+        </footer>
+      
+    </div>
+    </body>
+</html>

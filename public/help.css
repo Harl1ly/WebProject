@@ -1,0 +1,112 @@
+.header2 {
+  font-size:20px;
+  line-height:90px;
+  color:rgb(238, 105, 127);
+  text-align:center;
+  font-family:Apple Chancery, cursive;
+}
+
+#demo{
+  font-family:Bradley Hand, cursive;
+  margin-top: none;
+  line-height:5px;
+  font-size: 200%;
+}  
+  
+#back{
+  background-color:rgb(246, 192, 116);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  float:right;
+  border-radius: 15px 50px;;
+}
+
+#checkevents{  
+  color:#260C1A;
+  text-align:center;
+  font-variant:small-caps; 
+  font-size: 25px;  
+}
+ 
+#display {
+  background-color: rgb(254, 230, 234);
+  margin-top: none;
+  padding:none;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+  
+#image{
+  width:70px; 
+  height:70px; 
+  border-radius:50%; 
+}
+
+#image2{
+  width:45px; 
+  height:45px; 
+  border-radius:50%; 
+}
+
+.navigation a {
+  float: left;
+  font-weight: 600;
+  color:rgb(16, 16, 18);
+  text-decoration: none;
+  font-family: American Typewriter, serif  
+}
+    
+.search-bar {
+  border: none;
+}
+
+.search-bar input{
+  height: 20px;
+  width: 175px;
+}
+  
+.top-menu{
+  float: auto;
+  background-color:#333333;
+  padding: 20px 10px;
+}
+  
+.top-menu a:hover {
+  font-size: 135%;
+}
+  
+.bar-menu1 {
+  float: right;
+  text-align: center;
+  margin-right: 16px;
+  font-size: 17px;
+  text-decoration: none;
+  color:white; 
+}
+
+.div-box{
+  background-color: rgb(251, 191, 201);
+  height: 350px;
+  width:250px;
+  display:inline-block;
+  position: left;
+  padding-right: 30px;
+  margin: 25px;
+
+}
+
+.a{
+  font-family:Bradley Hand, cursive;
+  margin-top: none;
+  line-height:5px;
+  font-size: 200%;
+  text-align:center;
+}
+
+.b{
+  line-height:28px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    
+  
+    

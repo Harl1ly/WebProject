@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign up page</title>
+	<link rel="stylesheet" href="log_in.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+    <script src="/javascripts/ajax.js" defer></script>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+
+<body onload = "checkIfLog()">
+    <div id="app">
+    	
+		<h1 id="name">🐾 CattyPlanner
+			<span><img id="image" src="catty.jpg"/></span>
+		</h1>
+		<h2 id="des"> Your personal event planner!
+		</h2>
+		
+	<div class="back">
+	<nav class="menu">
+	
+	<div class="top-menu">
+		<div class="search-bar">
+			<input type="text" placeholder="What events?">
+			<button type="submit"><i class="fa fa-search"></i></button>
+			<a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+                <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+
+		</div>
+	</div>
+</nav>
+
+	
+		<div class = "main-div" id="signup-div">
+			<h1 style = "text-decoration: underline;"> SIGN UP </h1>
+
+			<h4 class = "login">User Name</h4>
+			<input id = "username" class="logbox" type="text" name="Username">
+			<p id="err" style = "display:none; color: red;"> This username has been taken! </p>
+			<h4 class = "login">First Name</h4>
+			<input id = "firstname" class="logbox" type="text" name="firstname">
+			<h4 class = "login">Last Name</h4>
+			<input id = "lastname" class="logbox" type="text" name="lastname">
+			<h4 class = "login">Email</h4>
+			<input id = "email" class="logbox" type="text" name="email">
+			<h4 class = "login">Password</h4>
+			<input id = "password" class="logbox" type="text" name="Password">
+
+			<br>
+			<button onclick = "adduser()" class = "center"> Sign Up </button> 
+			<p> Already had an account? <a href="log_in.html"> Log in here </a> </p>
+		</div>
+
+    	<footer>
+ 		<div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    	</div>
+    	<br/>
+    	<div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+    	</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

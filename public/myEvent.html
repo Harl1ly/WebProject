@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Events</title>
+	<script src="/javascripts/ajax.js" defer></script>
+    <script src="/project.js" defer></script>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="Account.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src = "https://kit.fontawesome.com/b5adeb4cd0.js" crossorigin = "anonymous"></script>
+	<script src="project.js" defer></script>
+</head>
+
+<body onload = "checkIfLog(); my_event()">
+	<div id="app">
+
+		<div id="logo">
+		<h1 id="name">🐾 CattyPlanner
+			<span><img id="image" src="catty.jpg"/></span> </h1>
+		<h2 id="des"> Your personal event planner!</h2>
+		</div>
+
+	<nav class="menu">
+	<div class="top-menu">
+		<div class="search-bar">
+			<input type="text" placeholder="What events?">
+			<button type="submit"><i class="fa fa-search"></i></button>
+			<a id = "changelog" class="bar-menu" v-bind:href="top_menu[0].url">{{top_menu[0].title}}</a>
+            <a class="bar-menu" v-bind:href="top_menu[1].url">{{top_menu[1].title}}</a>
+            <a class="bar-menu" v-bind:href="top_menu[2].url">{{top_menu[2].title}}</a>
+		</div>
+	</div>
+	</nav>
+
+	<main>
+
+		<h1 id="title">  My Events </h1>
+
+		<div class="back">
+
+		<br/>
+		<br/>
+
+		<div class = "box">
+			<h3> My Events Details </h3>
+
+        <input id = "search" type="text" placeholder="search relevant event">
+            <button id = "m_search_button" type="submit" onclick = "search_event()"><i class="fa fa-search"></i></button>
+
+        <div id = "users_details" class = "detail"></div>
+        <div id = "e_details" class = "detail" style = "display:none"></div>
+
+        <div id = "event_details" class = "detail">
+            
+		</div>
+
+		<button class = "e" id="editB" style = "position: relative; display: none;"> Edit </button>
+		<button class = "e" id="editF" onclick = "e_finish()" style="display: none;"> Finish </button>
+		</div>
+
+		</div>
+
+		<br/>
+		<span class="navigation">
+            
+            <button onclick="location.href='myEvent.html';"class="bar-menu2">🐾 My events</button>  
+           
+            <button onclick="location.href='calendar.html';" class="bar-menu2">🐾 Calendar</button>
+            
+            <button onclick="location.href='checkevent.html';"class="bar-menu2">🐾 Countdown</button> 
+
+            </span>
+	
+</main>
+	<footer>
+ 	<div class="bottom-nav">
+        <a href="help.html">Help</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <br/>
+    <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-instagram"></i>
+    </div>
+	</footer>
+
+
+</body>
+</html>
